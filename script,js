@@ -1,12 +1,14 @@
-const btn = document.getElementById('saibaMaisBtn');
-const extraContent = document.getElementById('extraContent');
+function mostrarMais() {
 
-btn.addEventListener('click', () => {
-    extraContent.classList.toggle('active');
+    const conteudo = document.getElementById("conteudoExtra");
+    const botao = document.getElementById("btnSaibaMais");
 
-    if (extraContent.classList.contains('active')) {
-        btn.textContent = "Mostrar Menos";
+    if (conteudo.style.display === "block") {
+        conteudo.style.display = "none";
+        botao.textContent = "Saiba Mais";
     } else {
-        btn.textContent = "Saiba Mais";
+        conteudo.style.display = "block";
+        botao.textContent = "Mostrar Menos";
     }
-});
+
+}
