@@ -1,11 +1,12 @@
-function showMessage() {
-    const messageDiv = document.getElementById("message");
+const btn = document.getElementById('saibaMaisBtn');
+const extraContent = document.getElementById('extraContent');
 
-    messageDiv.textContent =
-        "Juntos podemos cultivar um futuro sustentável!";
-    messageDiv.style.opacity = "1";
+btn.addEventListener('click', () => {
+    extraContent.classList.toggle('active');
 
-    setTimeout(() => {
-        messageDiv.style.opacity = "0";
-    }, 4000);
-}
+    if (extraContent.classList.contains('active')) {
+        btn.textContent = "Mostrar Menos";
+    } else {
+        btn.textContent = "Saiba Mais";
+    }
+});
