@@ -1,0 +1,11 @@
+function showMessage() {
+    const messageDiv = document.getElementById("message");
+
+    messageDiv.textContent =
+        "Juntos podemos cultivar um futuro sustentável!";
+    messageDiv.style.opacity = "1";
+
+    setTimeout(() => {
+        messageDiv.style.opacity = "0";
+    }, 4000);
+}
